@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles.css/style.css">
+    <title>Experian</title>
+</head>
+
+<body>
+    <div class="">
+
+        <header>
+
+            <div class="row pt-4 pb-4 ps-4 header_bg align-items-center">
+                <div
+                    class="col-6 d-flex flex-column justify-content-md-center align-items-md-center gap-md-4 flex-md-row">
+                    <p class="fw-bold hola">Hola</p>
+                    <p class="carlos">Carlos</p>
+
+                </div>
+                <div class="col-6 d-flex justify-content-end pe-5">
+                    <button class="btnPerfil fs-3"><span class="text-center pt-1 ms-sm-5 me-3 me-md-0">Perfil</span><i
+                            class="ms-sm-5 bi bi-chevron-right"></i></button>
+                    <i class="bi bi-info-circle"></i>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <!-- BARRA SUPERIOR -->
+            <div class="ppal_Box d-flex justify-content-around pt-4 pb-4">
+                <div class="ppalBox__user d-flex flex-column align-items-center">
+                    <div class="active ppal_Box__user d-flex justify-content-center align-items-center">
+                        <i class="bi bi-person-circle"></i>
+                    </div>
+                    <p class="ppalBox__text">Vista general de la cuenta</p>
+                </div>
+                <div class="ppalBox__user d-flex flex-column align-items-center">
+                    <div
+                        class="enable ppal_Box__user d-flex justify-content-center align-items-center position-relative">
+                        <div class="circleEnable position-absolute"></div>
+                        <i class="bi bi-pencil iconEnable"></i>
+                    </div>
+                    <p class="ppalBox__text">Editar Perfil</p>
+                </div>
+                <div class="ppalBox__user d-flex flex-column align-items-center">
+                    <div
+                        class="disable ppal_Box__user d-flex justify-content-center align-items-center position-relative">
+                        <div class="circleDisable position-absolute"></div>
+                        <i class="bi bi-file-lock iconDisable"></i>
+                    </div>
+                    <p class="ppalBox__text textDisable">Cambio de contraseña</p>
+                </div>
+                <div class="ppalBox__user d-flex flex-column align-items-center">
+                    <div
+                        class="enable ppal_Box__user d-flex justify-content-center align-items-center position-relative">
+                        <div class="circleEnable position-absolute"></div>
+                        <i class="bi bi-bell iconEnable"></i>
+                    </div>
+                    <p class="ppalBox__text">Configuración de notificaciones</p>
+                </div>
+            </div>
+            <div class="ppal_Box p-4">
+                <p class="fw-bold fs-1">Vista general de la cuenta</p>
+            </div>
+
+            <!-- FORMULARIO -->
+            <div class="ppal_Box p-4">
+                <p class="legendForm">Información General</p>
+                <form action="" class="d-flex flex-column" id="formulario">
+
+                    <label class="label fs-2 fw-bold" for="nombre">Nombres</label>
+                    <input id="nombre" class="input" type="text" placeholder="Ingresa tu nombre" required>
+
+                    <label class="label fs-2 fw-bold" for="apellidos">Apellidos</label>
+                    <input id="apellidos" class="input" type="text" placeholder="Ingresa tu apellido" required>
+                    <!-- select tipo de documento -->
+                    <label class="label fs-2 fw-bold" for="documento">Documento de identidad</label>
+                    <select id="documento" name="documento" class="input">
+                        <option value="cedula">Cedula de Ciudadania</option>
+                        <option value="pasaporte">Pasaporte</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+
+                    <label class="label fs-2 fw-bold" for="numDocumento">Número de documento de identidad</label>
+                    <input id="numDocumento" class="input" type="number"
+                        placeholder="Ingresa el número de tu documento" required>
+                    <label class="label fs-2 fw-bold" for="email">E-Mail</label>
+                    <input id="email" class="input" type="email" placeholder="Ingresa tu email">
+                    <label class="label fs-2 fw-bold" for="numCelular">Celular</label>
+                    <div class="row flex-row">
+                        <div class="col-3">
+                            <div class="input" id="dDown"">
+                                <div data-value=" +57" class="inputFlag" id="col">
+                                <div class="d-flex">
+                                    <img class="flag" src="./img/Colombia.png" />
+                                    <p>+57</p>
+                                </div>
+                            </div>
+                            <div data-value="+56" class="inputFlag hidden" id="chi">
+                                <div class="d-flex">
+                                    <img class="flag" src="./img/Chile.png" />
+                                    <p>+56</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <input id="numCelular" class="input w-100" type="number"
+                            placeholder="Ingresa tu numero de celular">
+                    </div>
+            </div>
+            <label class="label fs-2 fw-bold" for="fechaNacimiento">Fecha de Nacimiento</label>
+            <input id="fechaNacimiento" class="input" type="date">
+            <label class="label fs-2 fw-bold" for="">Genero</label>
+            <div class="row flex-row justify-content-between">
+                <label for="InputgeneroMen" class="inputGenero">
+                    <div class="input  inputGeneroActive" id="inputGeneroHombre">
+                        <p class="text-center textGenero">Hombre</p>
+                    </div>
+                </label>
+                <input type="radio" name="radio" id="InputgeneroMen" class="" value="hombre">
+
+                <label for="InputgeneroMenWomen" class="inputGenero">
+                    <div class="input" id="inputGeneroMujer">
+                        <p class="text-center textGenero">Mujer</p>
+                    </div>
+                </label>
+                <input type="radio" name="radio" id="InputgeneroMenWomen" class="" value="mujer">
+            </div>
+
+            <button type="submit" class="input mt-5 editarForm1">Editar</button>
+            </form>
+        </main>
+
+
+    </div>
+
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

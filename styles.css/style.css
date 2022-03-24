@@ -1,0 +1,229 @@
+@font-face {
+    font-family: "DinText";
+    src: url("../font/DIN\ Next\ LT\ Arabic\ Regular.ttf");
+  }
+
+:root {
+
+    /* Paleta de colores */
+    --bgHeader: #E4E0E8;
+    --bgMain: #F1F1F7;
+    --white: #FFFFFF;
+    --black: #000000;
+    --button: #632678;
+    --label: #492F77;
+
+    --iconDisable: #bdbbbb;
+
+    --cirlcePaternDisable: #F1EFF3;
+
+    --circleEnable: #BC1656;
+    --circleDisable: #DD8AAA;
+    
+    --borderInput: #f1f1f1;
+
+  }
+
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+  }
+  body {
+    font-size: 1.6rem;
+    background-color: var(--bgMain);
+  }
+
+  p{
+      margin: 0;
+  }
+
+
+  main{
+      background-color: var(--bgMain);
+  }
+
+  .header_bg{
+      background-color: var(--bgHeader);
+  }
+
+  .hola{
+      color: var(--button);
+  }
+  .carlos{
+      font-size: 2rem;
+      font-family:'DinText';
+      color: rgb(83, 83, 83);
+  }
+
+  .btnPerfil{
+      background-color: var(--button);
+      border: none;
+      width: 14rem;
+      height: 3.1rem;
+      border-radius: 1rem;
+      color: var(--white);
+      font-weight: 600;
+  }
+  .bi-chevron-right{
+      font-size: 1.5rem;
+      
+  }
+  .bi-info-circle{
+      color: var(--button);
+      font-weight: 800;
+      font-size: 2rem;
+      margin-left: 2rem;
+  }
+
+  .ppal_Box{
+      margin: 2rem;
+      background-color: var(--white);
+      border-radius: 1rem;
+      -webkit-box-shadow: 3px 3px 12px -4px rgba(0,0,0,0.46); 
+      box-shadow: 3px 3px 12px -4px rgba(0,0,0,0.46);
+  }
+
+  .ppalBox__user{
+      width: 8rem;
+      cursor: pointer;
+  }
+
+  .ppal_Box__user{
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+  }
+
+  .ppalBox__text {
+      font-size: 1rem;
+      text-align: center;
+      font-weight: bold;
+      padding-top: 1rem;
+      line-height: 2rem;
+  }
+
+  .bi-person-circle {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--white);
+  }
+
+  .active {
+      background-color: var(--button);
+  }
+  .enable {
+      background-color: var(--bgHeader);
+  }
+  .iconEnable{
+      color: var(--black);
+      font-size: 3rem;
+      margin-bottom: 1rem;
+  }
+  .circleEnable {
+      width: 1.7rem;
+      height: 1.7rem;
+      border-radius: 50%;
+      background-color: var(--circleEnable);
+      right: 0rem;
+      top: 0rem;
+  }
+
+  .disable {
+    background-color: var(--cirlcePaternDisable);
+  }
+  .iconDisable{
+      color: var(--iconDisable);
+      font-size: 3rem;
+      margin-bottom: 1rem;
+  }
+  .circleDisable {
+      width: 1.7rem;
+      height: 1.7rem;
+      border-radius: 50%;
+      background-color: var(--circleDisable);
+      right: 0rem;
+      top: 0rem;
+  }
+
+  .textDisable {
+    color: var(--iconDisable);
+  }
+
+  /* FORM #1 */
+  .legendForm {
+      color: var(--button);
+      font-size: 2.2rem;
+      font-weight: 300;
+  }
+
+  .label {
+      color: var(--label);
+      padding-top: 2rem;
+  }
+  .input {
+      border: 2px solid var(--borderInput);
+      border-radius: .5rem;
+      padding: .5rem;
+  }
+
+  .flag {
+      height: 25px;
+  }
+
+  .inputFlag {
+      cursor: pointer;
+      padding-left: 2rem;
+  }
+
+  .inputFlag:hover {
+      background-color: #818181;
+      border-radius: 1rem;
+  }
+
+  /* #chi {
+      display: none;
+  } */
+
+    .hidden {
+    display: none;
+    }
+    .hiddens {
+    display: none;
+    }
+    .visible {
+    display: block;
+    }
+
+    .inputGenero{
+        width: 48%;
+        cursor: pointer;
+    }
+
+    .inputGeneroActive{
+        background-color: var(--button);
+        color: var(--white);
+    }
+
+    /* .inputGenero:hover{
+        background-color: var(--iconDisable);
+        color: var(--white);
+    } */
+
+    .textGenero{
+        font-weight: 600;
+    }
+
+    .editarForm1{
+        background-color: var(--button);
+        color: var(--white);
+    }
+
+
+
+
+
+
+
+
+
