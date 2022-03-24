@@ -2,6 +2,8 @@
 
 const formulario = document.querySelector('#formulario');
 
+const main = document.querySelector('#main');
+
 const nombreInput = document.querySelector('#nombre');
 const apellidosInput = document.querySelector('#apellidos');
 const documentoInput = document.querySelector('#documento');
@@ -108,7 +110,8 @@ function enviandoInfo(e) {
     user.numCelular = numCelularInput.value;
     user.fechaNacimiento = fechaNacimientoInput.value;
 
-    console.log(user);
+    
+    imprimirEnPantalla(user)
 }
 
 /* extraer con destructuring los valores de la API */
@@ -120,13 +123,62 @@ function llenarForm({nombre, apellidos, documento ,numDocumento, email, numCelul
     emailInput.value = email;
     numCelularInput.value = numCelular;
     fechaNacimientoInput.value = fechaNacimiento;
-    console.log(genero);
+
 
     if ( genero === 'hombre') {
-        console.log('es hombre');
+
         document.querySelector('#InputgeneroMen').checked = true;
     } else {
-        console.log('es mujer');
+
         document.querySelector('#InputgeneroMenWomen').checked = true;
     }
 }
+
+function imprimirEnPantalla({nombre, apellidos, documento, numDocumento, email, numCelular, fechaNacimiento}) {
+    console.log(user);
+
+    
+
+    const divResultado = document.createElement('DIV')
+    divResultado.classList.add('ppal_Box','p-4')
+
+    limpiarHTML()
+
+    tituloResultado = document.createElement('H2')
+    tituloResultado.textContent = 'DATOS DEL USUARIO'
+    tituloResultado.classList.add('text-center','p-4')
+
+    nombreResultado = document.createElement('P')
+    nombreResultado.innerHTML = `<strong>Nombre: </strong>${nombre}`
+    apellidosResultado = document.createElement('P')
+    apellidosResultado.innerHTML = `<strong>Apellidos: </strong>${apellidos}`
+    documentoResultado = document.createElement('P')
+    documentoResultado.innerHTML = `<strong>Tipo de Documento: </strong>${documento}`
+    numDocumentoResultado = document.createElement('P')
+    numDocumentoResultado.innerHTML = `<strong>Numero de Documento: </strong>${numDocumento}`
+    emailResultado = document.createElement('P')
+    emailResultado.innerHTML = `<strong>Correo Electronico: </strong>${email}`
+    numCelularResultado = document.createElement('P')
+    numCelularResultado.innerHTML = `<strong>Correo Electronico: </strong>${numCelular}`
+    fechaNacimientoResultado = document.createElement('P')
+    fechaNacimientoResultado.innerHTML = `<strong>Correo Electronico: </strong>${fechaNacimiento}`
+
+    divResultado.appendChild(tituloResultado)
+    divResultado.appendChild(nombreResultado)
+    divResultado.appendChild(apellidosResultado)
+    divResultado.appendChild(documentoResultado)
+    divResultado.appendChild(numDocumentoResultado)
+    divResultado.appendChild(emailResultado)
+    divResultado.appendChild(numCelularResultado)
+    divResultado.appendChild(fechaNacimientoResultado)
+
+    main.appendChild(divResultado)
+    
+}
+
+
+function limpiarHTML() { 
+    while (main.firstChild) {
+        main.removeChild(main.firstChild);
+    }
+  }
